@@ -29,6 +29,8 @@
 #ifndef GEOMETRY_H
 #define GEOMETRY_H
 
+#include <stdlib.h>
+
 #include "vector3.h"
 #include "face3.h"
 #include "dvector.h"

@@ -100,6 +100,8 @@ Error ThreadPosix::set_name_func_posix(const String& p_name) {
 	#ifdef PTHREAD_BSD_SET_NAME
 	pthread_set_name_np(running_thread, p_name.utf8().get_data());
 	int err = 0; // Open/FreeBSD ignore errors in this function
+	#elif __NetBSD__
+	pthread_setname_np(running_thread, p_name.utf8().get_data(), NULL);
 	#else
 	int err = pthread_setname_np(running_thread, p_name.utf8().get_data());
 	#endif // PTHREAD_BSD_SET_NAME

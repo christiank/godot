@@ -50,14 +50,14 @@
  #ifdef ANDROID_ENABLED
   #include "platform/android/ifaddrs_android.h"
  #else
-  #ifdef __FreeBSD__
+  #ifndef _GNU_SOURCE
    #include <sys/types.h>
   #endif
   #include <ifaddrs.h>
  #endif
  #include <arpa/inet.h>
  #include <sys/socket.h>
- #ifdef __FreeBSD__
+ #ifndef _GNU_SOURCE
   #include <netinet/in.h>
  #endif
 #endif

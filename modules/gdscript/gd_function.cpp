@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 #include "gd_function.h"
 #include "gd_script.h"
 #include "os/os.h"

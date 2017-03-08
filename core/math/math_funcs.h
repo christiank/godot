@@ -43,9 +43,11 @@ class Math {
 public:
 	Math() {}; // useless to instance
 
+#ifndef RANDOM_MAX
 	enum {
 		RANDOM_MAX=2147483647L
 	};
+#endif
 
 	static double sin(double p_x);
 	static double cos(double p_x);
